@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+dist/
+
+# next.js
+/.next/
+/out/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
