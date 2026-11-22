@@ -8,9 +8,22 @@
 		"start": "next start",
 		"lint": "eslint",
 		"format": "prettier --write .",
-		"format:check": "prettier --check ."
+		"format:check": "prettier --check .",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"*.{json,css,scss,md}": [
+			"prettier --write"
+		]
 	},
 	"dependencies": {
+		"@ant-design/nextjs-registry": "^1.3.0",
+		"antd": "^6.7.1",
+		"date-fns": "^4.4.0",
 		"next": "16.4.4",
 		"react": "19.3.0",
 		"react-dom": "19.3.0"
@@ -22,6 +35,8 @@
 		"@types/react-dom": "^19",
 		"eslint": "^10.14.0",
 		"eslint-config-next": "16.4.4",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.6.2",
 		"prettier": "3.9.10",
 		"tailwindcss": "^4",
 		"typescript": "^5"
